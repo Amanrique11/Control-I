@@ -31,3 +31,7 @@ Todos los componentes estan conectados en una misma trayectoria, por lo que la m
 Cada componente está conectado de manera independiente a la fuente de alimentación, lo que significa que la corriente puede tomar diferentes caminos.
 ## 2.3 Modelamiento en circuiros RLC
 En en modelamiento en circuitos electricos, se analiza por medio de las leyes de Kirchoff, ya se por mallas o por nodos, Por mallas nos enfocamos en que los voltajes en la malla sea 0, y por nodos nos enfocamos en las corrientes que entran a un nodo, y esta debe ser tambien igual a 0.
+## 2.4 Amplificadores operacionales
+Es un circuito integrado que permite hacer gran variedad de circuitos utiles. Desde comparador de voltajes, un amplificador de señal, hacer operaciones aritmeticas y filtar señales. Los amplificadores estan compustos por una gran cantidad de transistores internamente que perimite controlar corrientes y tensiones, para darle sus caracteristicas electricas.
+
+Para hacer su modelacion debemos tener encuenta que en sus etradas no hay corriente ademas de que el volatje de las entradas son las mismas, y para facilitar el modelamiento se analiza por medio de las leyes de kirchoff por nodos.
