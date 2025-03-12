@@ -81,3 +81,21 @@ $\mathcal{L}[f(t)]=2\frac{6}{s^{4}}+\frac{1}{s-5}+4\frac{3}{s^{2}+9}$
 $\mathcal{L}^{-1}[\frac{8s}{(s^{2}+1)^{2}}]=8\frac{1}{s^{2}+1}\frac{s}{s^{2}+1}$
 
 $\mathcal{L}^{-1}[\frac{8s}{(s^{2}+1)^{2}}] = 8sin{t}cos{t}$
+# 4.Funcion de Transferencia 
+## 4.1 Definicion y conceptos clave:
+la funcion de transferencia describe la relacion entre la entrada y la salida de un sistema lineal en el dominio de Laplace. Se expresa como:
+
+$$G(s)=\frac{Y(s)}{U(s)}$$
+
+## 4.2 Clasificacion de las funciones de transferencia
+1. Impropias: Grado de numerador $$N(s)$$ > grado del denominador $$D(s)$$.
+2. Estrictamente propias: Grado $$D(s)$$ > grado de $$N(s)$$.
+3. Bipropias: Grados iguales en $$N(s)$$ y $$D(s)$$.
+## 4.3 Zeros y Polos
+Zeros: Son los valores de $$s$$ que hacen cero el numerador $$N(s)$$ de la funcion de transferenci $$G(s)$$
+Polos: Son los valores de $$s$$ que hacen cero el denominador $$D(s)$$ de $$G(s)$$, lo que hace la funcion de transferencia tienda a infinito.
+## 4.4 Representacion en el plano complejo
+Eje real: Indica componentes relacionadas con la rapidez de la repuesta del sistema.
+*Polos en el semiplano izquierdo: La funcion de transferencia es estable.
+*Polos en el semiplano derecho: La funcion es inestable.
+Eje imaginario: Indica componentes oscilatorias de la respuesta.
