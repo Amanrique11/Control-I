@@ -63,3 +63,31 @@ Es un sistema que posee sus polos unicamente con componentes imaginarias
 
 ![image](https://github.com/user-attachments/assets/275a30c0-6f93-4d2a-9873-4a39afd5d4de)
 
+## Sistema Subamortiguado
+
+Es aquel que poseee  un par de polos complejos conjigados dentro de un sistema de segundo orden.
+
+![image](https://github.com/user-attachments/assets/da18b3c7-62bc-4551-97d5-c6758ae23831)
+### Respueta de uns sistema Subamortiguado
+
+![image](https://github.com/user-attachments/assets/025dab07-1d57-4694-85e8-21f770051616)
+
+Donde: 
+
+Tp = Tiempo pico
+
+Mp = Maximo Sobreimpulso
+
+Td = Tiempo de desplazmamiento 
+
+Ts = Tasa de Establecimineto 
+
+
+### Analisis ananilitico de un sistema subamortiguado
+En un sistema Subeamortiguado podemos hallar diferentes valores que nos ayuden a controlar la respuesta de la funcion de transferencia.
+
+Donde podemos controlar en que momento queremos que tiempo queremos este la priemra subida en la respuesta:
+
+$$t_p = \frac{\pi}{\omega_n \sqrt{1 - \zeta^2}}$$
+
+Tambien podemos saber cual es el sobre impulso que hay entre el valor mas alto y el valor cuando el sistema ya esta estable. 
