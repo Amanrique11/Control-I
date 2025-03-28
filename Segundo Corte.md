@@ -4,9 +4,8 @@ Un sistema de seguhndo orden es aquqel funcion de tranferencia tiene dos polos. 
 ## Ecuacion General
 $$G(S) = \frac{c}{s^2 +  a \cdot s + b}$$
 
-Gracias  a esta ecuacion podemos ver un apriximado al comportamiento del sistema por medio de los polos del sistemas.
 
-$$s^2 +  a \cdot s + b=0$$
+
 
 ## Ecuacion canonica
 
@@ -35,4 +34,32 @@ $\zeta > 1$ - Sistema Sobre  Amortiguado
 
  ![image](https://github.com/user-attachments/assets/5da71048-4278-4401-a104-7c09be6a83a7)
 
+### Variacion de la frecuencia Natural No Amortiguada
+
+![image](https://github.com/user-attachments/assets/cb691ee6-80ae-4514-9e79-1ae6b0903a4a)
+
+## Polos de los sistemas de sistemas
+Partiendo de la ecuacion canonica de un sistema de segundo orden, los polos estan dado caudno el denomindaro se iguala a cero.
+
+$$s^2 + 2\zeta\omega_n s + \omega_n^2 = 0$$
+
+Aplicamos la ecuacion general para encontrar las reices del polimonio.
+
+$$s_{1,2} = \frac{-2\zeta\omega_n \pm \sqrt{4\zeta^2\omega_n^2 - 4\omega_n^2}}{2}$$
+
+$$s_{1,2} = \frac{-2\zeta\omega_n \pm \sqrt{4\omega_n^2(\zeta^2 - 1)}}{2}$$
+
+Los polos del sistemas de segundo orden son:
+
+$$s_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2 - 1}$$
+
+## Sistema Oscilatorio
+
+Es un sistema que posee sus polos unicamente con componentes imaginarias
+
+![image](https://github.com/user-attachments/assets/28910c30-83ad-4bd6-bc5f-6a672b3e81d4)
+
+### Respuesta transitoria del sistema oscilatorio
+
+![image](https://github.com/user-attachments/assets/275a30c0-6f93-4d2a-9873-4a39afd5d4de)
 
