@@ -2,10 +2,8 @@
 ## ¿Que es?
 Un sistema de seguhndo orden es aquqel funcion de tranferencia tiene dos polos. Al igual que en los sistemas de primer orden, en cual quier fisico real el numero de ceros debe ser inferior o igual al de los polos, y por ello los sistemas de segundo orden pueden tener maximo dos ceros
 ## Ecuacion General
+
 $$G(S) = \frac{c}{s^2 +  a \cdot s + b}$$
-
-
-
 
 ## Ecuacion canonica
 
@@ -91,3 +89,36 @@ Donde podemos controlar en que momento queremos que tiempo queremos este la prie
 $$t_p = \frac{\pi}{\omega_n \sqrt{1 - \zeta^2}}$$
 
 Tambien podemos saber cual es el sobre impulso que hay entre el valor mas alto y el valor cuando el sistema ya esta estable. 
+
+$$MP = \frac{y(t_p) - y(\infty)}{y(\infty) - y(0)} = e^{\frac{-\zeta\pi}{\sqrt{1 - \zeta^2}}}$$
+
+Tambien podemos analizar en que tienpo el sistema este estable con un error del 2%:
+
+${t_s(2\%)} \approx \frac{4}{\zeta \omega_n}$
+
+## Sistema criticamente amortiguado
+
+Posee dos polos iguales ubucados en el mismo punto del plano complejo para un sistema de segundo grado.
+
+![image](https://github.com/user-attachments/assets/94be4310-4759-47fa-8da8-b2a78d1b504a)
+
+### Respuesta de un sistema criricamente amortiguado
+
+![image](https://github.com/user-attachments/assets/f3e1e762-f0b5-4650-8d3d-aa1cfe37a029)
+
+
+Donde podemos hallar ts con un margen de error del 2% por medio de la siguiente formula:
+
+$$t_s = \frac{5.8335}{\omega_n}$$
+
+## Sistema Sobreamortiguado
+
+Posee dos polos reales diferentes dentro de un sistema de segundo orden, donde ya no existe oscialciones.
+
+![image](https://github.com/user-attachments/assets/e2ad81f2-e35b-44f4-9a22-05583b89ed27)
+
+### Respeusta de un sistema sobreamortiguado 
+
+![image](https://github.com/user-attachments/assets/7b9531b8-53e0-4f81-bb57-4fafe347abc6)
+
+$$\tau_{eq} = \frac{2\zeta}{\omega_n}$$
