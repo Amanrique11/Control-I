@@ -122,3 +122,19 @@ Posee dos polos reales diferentes dentro de un sistema de segundo orden, donde y
 ![image](https://github.com/user-attachments/assets/7b9531b8-53e0-4f81-bb57-4fafe347abc6)
 
 $$\tau_{eq} = \frac{2\zeta}{\omega_n}$$
+
+# Sistema de orden Superior
+
+Son sistemas de grado mayor a 2, debido a esro es posible descomponerlos en  polimonios de primer y segundo orden, por lo tanto los comportamineto seran combinaciones de funciones exponenciales y/o sinuosidales
+
+## Polos dominantes
+
+Dependiendo de su ubucacion de sistema tendra unos polos que predominaran en su comportamiento, donde los polos con parte real mas cerca al origen dominaran en el comportamiento del regimen transitorio del sistema.
+
+Los otros polos estan alejados al menos una distancia 6 veces la ubicacion de los polos dominantes se considera insignificante efecto y se podra realizar una aproximacion.
+
+## Retarddo o tiempo muerto de un sistema 
+
+En el dominio del tiempo el tiempo muerto se intertpreta como un corrimiento de la funcon hacia la derecha que indica que se demora en empenzar la funcion.
+
+Al plicar la transformada de LaPlace a un desplazamineto en el tiempo lo que se obtien es un funcion exponencial.
