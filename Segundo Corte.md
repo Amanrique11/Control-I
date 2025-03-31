@@ -133,8 +133,12 @@ Dependiendo de su ubucacion de sistema tendra unos polos que predominaran en su 
 
 Los otros polos estan alejados al menos una distancia 6 veces la ubicacion de los polos dominantes se considera insignificante efecto y se podra realizar una aproximacion.
 
-## Retarddo o tiempo muerto de un sistema 
+## Retardo o tiempo muerto de un sistema 
 
 En el dominio del tiempo el tiempo muerto se intertpreta como un corrimiento de la funcon hacia la derecha que indica que se demora en empenzar la funcion.
 
 Al plicar la transformada de LaPlace a un desplazamineto en el tiempo lo que se obtien es un funcion exponencial.
+
+## Ejemplo #1 :
+
+
