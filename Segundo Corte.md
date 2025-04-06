@@ -141,7 +141,7 @@ Al plicar la transformada de LaPlace a un desplazamineto en el tiempo lo que se 
 
 ## Ejemplo #1 :
 
-### ¿Como controlar estos sistemas?
+# ¿Como controlar estos sistemas?
 
 Para poder controlar estos sistemas sed debe saber que queremos lograr con la variable que se quire controlar, Comparar la varaiable que se quiere contolar con el valor deseado de las misma, a partir de resultado de la comparacion se toma una decision.
 
@@ -153,3 +153,43 @@ Los sistemas de control de lazo cerrado son ampliamente utilizados en la varieda
 
 
 Este valor deseado se conoce como el Setpoint y sera el unico valor modificado en el sistema. La funcion de transferencia es esencial para analizar como se comporta el sistema ante diferentes entradas y perturbaciones. Para una comparacion profunda de como se determina y utiliza la funcin de transferencia en sistema de control.
+
+## Control ON-OFF
+
+Este tipo de controlador, tambien llamado Todo o Nada, usa un algoritmo simple para solamente revisa la variable del proceso esta por encima o por debajo de un setpoint determinado.
+
+En terminos practico, la variable manipuladad o la señal de control cambia entre totalmente OON o totalmente OFF, sin estados intermedios. Este tipo de accionamiento provoca un control muy impreciso de la variable de proceso.
+
+![image](https://github.com/user-attachments/assets/09f2183b-57f2-4e95-bade-a864a249b350)
+
+
+## Control Proporcional
+
+Es la forma mas simple de control continuo que se puede utilizar en un sistema de lazo cerrado que corrigue el error entre una señal deseada y la señal real, aplicando una accion proporcional a ese error.
+### ¿Como funciona?
+El controlador proporcional genera una señal de control $u(t)$ que es directamente proporcionsl al error $e(t)$:
+
+$$ u(t) = K_p*e(t)$$
+
+$u(t)$: Señal de control que se envia al sistema
+
+$e(t) = r(t) - y(t)$: Error, que es la diferencia entre la referencia  y la salida real.
+
+$K_p$: Ganancia proporciona, una constante que determina que tan fuerte reacciona el sistema al error.
+
+### ¿Que hace el Kp?
+Si el Kp es bajo, la correcion es suave, pero lenta y puede haber error permanente, si el Kp es alto, la correccion es rapida, pero puede causar oscialciones o inestabilidad.
+
+## Modelo de un sistema de primer orden
+
+$$G(s) = \frac{K}{\tau s + 1}$$
+
+K: Ganancia del sistema
+
+$\tau$: Consate de tiempo
+
+s: Varuable de Laplace
+
+Utilizando agregando el control proporcional la ecuacion queda:
+
+$$T(s) = \frac{K_p \cdot G(s)}{1 + K_p \cdot G(s)} = \frac{K_p \cdot K}{\tau s + 1 + K_p \cdot K}$$
