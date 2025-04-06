@@ -141,4 +141,15 @@ Al plicar la transformada de LaPlace a un desplazamineto en el tiempo lo que se 
 
 ## Ejemplo #1 :
 
+### ¿Como controlar estos sistemas?
 
+Para poder controlar estos sistemas sed debe saber que queremos lograr con la variable que se quire controlar, Comparar la varaiable que se quiere contolar con el valor deseado de las misma, a partir de resultado de la comparacion se toma una decision.
+
+## Lazo cerrado 
+
+Los sistemas de control de lazo cerrado son ampliamente utilizados en la variedad de industrias para regular y controlar procesos automatizados. Tambien es conocido como sistema de control realimentacion, utiliza una señal de retroalimentacion para comparar el resusltado deseado con el resultado actual y ajustar el proceso en consecuencia, permitiendo una mayor precision y estabilidad en comparacion con los sistemas de lazo abierto.
+
+![image](https://github.com/user-attachments/assets/e471fd9e-ef97-4f93-95e4-af2f4e0552d2)
+
+
+Este valor deseado se conoce como el Setpoint y sera el unico valor modificado en el sistema. La funcion de transferencia es esencial para analizar como se comporta el sistema ante diferentes entradas y perturbaciones. Para una comparacion profunda de como se determina y utiliza la funcin de transferencia en sistema de control.
