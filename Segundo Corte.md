@@ -94,7 +94,7 @@ $$MP = \frac{y(t_p) - y(\infty)}{y(\infty) - y(0)} = e^{\frac{-\zeta\pi}{\sqrt{1
 
 Tambien podemos analizar en que tienpo el sistema este estable con un error del 2%:
 
-${t_s(2\%)} \approx \frac{4}{\zeta \omega_n}$
+$$t_s = \frac{4}{\zeta \omega_n}$$
 
 ## Sistema criticamente amortiguado
 
