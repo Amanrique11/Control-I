@@ -16,7 +16,7 @@ $\zeta$ = Factor de amotiguamineto .
 
 $\omega_n$ = Frecuencia Natural
 
-## ¿Dinamica de los sistemas de Segundo Orden
+## Dinamica de los sistemas de Segundo Orden
 
 El comportamiento dinamico de un sistema de segundo oirden puede ser descrito en terminos de dos parametros $\zeta$ y $\omega_n$.
 Dependiendo del valor que tome $\zeta$ el sistema tendra diversos comportamientos, los cuales son:
@@ -139,7 +139,20 @@ En el dominio del tiempo el tiempo muerto se intertpreta como un corrimiento de 
 
 Al plicar la transformada de LaPlace a un desplazamineto en el tiempo lo que se obtien es un funcion exponencial.
 
-## Ejemplo #1 :
+## Ejemplo #1 : $$G(s) = \frac{18}{s^2 + 2.4s + 9}$$
+  $$\omega_n^2 = 9 \Rightarrow \omega_n = 3$$
+
+$$K\omega_n^2 = 18 \Rightarrow K = \frac{18}{9} = 2$$
+
+$$2\zeta\omega_n = 2.4 \Rightarrow \zeta = \frac{2.4}{2*3} = 0.4$$
+
+$$t_p = \frac{\pi}{3\sqrt{1-0.4^2}} = 1.14_s$$
+
+$$M_p = 100e\frac{-0.4\pi}{\sqrt{1-0.4^2}} = 25.38\%$$
+
+$$t_s = \frac{4}{0.4*3} = 3.33_s$$
+
+ ![image](https://github.com/user-attachments/assets/99f8e155-2529-4b3e-8836-a1e2bbef565b)
 
 # ¿Como controlar estos sistemas?
 
@@ -193,3 +206,52 @@ s: Varuable de Laplace
 Utilizando agregando el control proporcional la ecuacion queda:
 
 $$T(s) = \frac{K_p \cdot G(s)}{1 + K_p \cdot G(s)} = \frac{K_p \cdot K}{\tau s + 1 + K_p \cdot K}$$
+
+# Estabilidad
+## Teorema del valor final
+Es una ecuacion bastante util en el analisis de sistemas y en la teoria dde control, donde nos indica cual es el valor final en el estado estacionario del sistema.
+
+Cuando un sistema dinamico que se encuentra representado por nuna ecucion diferencial, llega al estado estacionario cuando el tiempo va para infinito, quiere decir qur los cambios en el sistema se vuelven nulos.
+
+$$\lim_{s \to 0} \left[ sF(s) - f(0) \right]$$
+$$\lim_{t \to \infty }[f(t)]$$
+
+Una condicion es que el sistema debe ser estable. Si el sistema no es estable, el teorema del valor final no es estable 
+
+### Analisis de estabilidad por el teorema de valor final
+
+Para el analisis de estabilidad es necesario evaluar elvalor final de entrada y la de salida para establecer si estan limitadas de la misma manera.
+
+Para la entrada:
+$$\lim_{s \to 0} s \cdot \frac{A}{s} = A$$
+
+En cuanto la salida de este es multiplicado por la entrada y se tambien se le aplica el limite.
+## Analisis de establidad por ubicacion de polos
+### Ubicacion de polos 
+Las raices del poliimonio denominador de la funcion de transferencia, define los polos del sistemas. Dependiendo de la ubicacion de los polos de un sistema es posible determinar si un sistema es estable o no.
+
+Si todos los polos del sistema estan ubicados en el semiplano  izquierdo, es decir si todos los polos tienen parte real negativa el sistema es estable.
+
+Si por lo  menos un polo del sistema esta a la derecha del semiplano, el sistema es inestable.
+
+## Criterio de Routh-Hurwitz
+Es  una herramiemta analitica que se usa para determinar la estabilidad de un sistema sin tener que calcular los polos de su ecuacion caracteristicas, esta herramienta se utiliza con polimonios de grado superior.
+### Condicion para estabilidad absoluta
+Para que un sistema sea estable, todas las raices del polimonio caracteristico deben tener parte negativa. Y todos los elementos de la primera columna de la tabla de Routh tienen el mismo signo (y ninguno es cero).
+### ¿Como se aplica?
+1. Se forma la tabla de Routh, que es una especie de matriz organizada por filas que representa el polimonio.
+2. A partir de los coeficientes del polimonio, se construye las filas sucesivas.
+3. Se revisa la primera columna: Si todos los signos son positivos (o todos son negativos), es sistema es estabale. Si hay cambio de signo, hay raices en el simeplano derecho , lo que indica inestabilidad. 
+### ¿Y si hay ceros o cambio de signo?
+1. Si aparece  un cero en la primera columna, hay que aplicar un truco matematico (como derivar o usar una pequeña constante \varepsilon.
+2. Si hay cambio de signo, cada cambio indica una raiz en el semiplano derecho.
+
+### Diseño de control para que se estable 
+
+Usamos un controlador porpocional $K_p$, Esto significa que simplemente estamos multiplicado la salida por un valor constante para tratar de controlar el sistema.
+
+Cuando conectamos el comtrolador con la planta en un sistema en lazo cerrado, la funcio de transferencia pasa a:
+
+$$T(s) = \frac{K_p \cdot G(s)}{1 + K_p \cdot G(s)}$$
+
+Lo que nos interesa queda en el poliminio caracteristico, donde haremos la tabla con los coeficientes del poliminio. y gracias a ello en donde aparce la constante de porpocionalidad se pone mayor a 0, con el resultado se puede determinar que resultado de $K_p$ nos funciona para volver el sistema estable.
