@@ -154,6 +154,18 @@ $$t_s = \frac{4}{0.4*3} = 3.33_s$$
 
  ![image](https://github.com/user-attachments/assets/99f8e155-2529-4b3e-8836-a1e2bbef565b)
 
+ ## Ejemplo #2: $$(G(s) =  \frac{16}{s^2+8s+16}$$
+$$\omega_n^2 = 16 \Rightarrow \omega_n = 4$$ 
+
+$$K\omega_n^2 = 16 \Rightarrow K = \frac{16}{16} = 1$$
+
+$$2\zeta\omega_n = 8 \Rightarrow \zeta = \frac{8}{2*4} = 1$$ 
+
+$$t_s = \frac{5.8335}{\omega_n} \Rightarrow \frac{5.8335}}{4} = 1.45_s  $$
+
+![image](https://github.com/user-attachments/assets/ea0ee60f-4bba-4c38-b1bd-1ecba8868a8c)
+
+
 # ¿Como controlar estos sistemas?
 
 Para poder controlar estos sistemas sed debe saber que queremos lograr con la variable que se quire controlar, Comparar la varaiable que se quiere contolar con el valor deseado de las misma, a partir de resultado de la comparacion se toma una decision.
