@@ -161,7 +161,7 @@ $$K\omega_n^2 = 16 \Rightarrow K = \frac{16}{16} = 1$$
 
 $$2\zeta\omega_n = 8 \Rightarrow \zeta = \frac{8}{2*4} = 1$$ 
 
-$$t_s = \frac{5.8335}{\omega_n} \Rightarrow \frac{5.8335}}{4} = 1.45_s  $$
+$$t_s = \frac{5.8335}{\omega_n} \Rightarrow \frac{5.8335}{4} = 1.45_s  $$
 
 ![image](https://github.com/user-attachments/assets/ea0ee60f-4bba-4c38-b1bd-1ecba8868a8c)
 
