@@ -139,7 +139,7 @@ En el dominio del tiempo el tiempo muerto se intertpreta como un corrimiento de 
 
 Al plicar la transformada de LaPlace a un desplazamineto en el tiempo lo que se obtien es un funcion exponencial.
 
-## Ejemplo #1 : $$G(s) = \frac{18}{s^2 + 2.4s + 9}$$
+###  💡Ejemplo #1 : $$G(s) = \frac{18}{s^2 + 2.4s + 9}$$
   $$\omega_n^2 = 9 \Rightarrow \omega_n = 3$$
 
 $$K\omega_n^2 = 18 \Rightarrow K = \frac{18}{9} = 2$$
@@ -154,7 +154,7 @@ $$t_s = \frac{4}{0.4*3} = 3.33_s$$
 
  ![image](https://github.com/user-attachments/assets/99f8e155-2529-4b3e-8836-a1e2bbef565b)
 
- ## Ejemplo #2: $$(G(s) =  \frac{16}{s^2+8s+16}$$
+ ### 💡Ejemplo #2: $$(G(s) =  \frac{16}{s^2+8s+16}$$
 $$\omega_n^2 = 16 \Rightarrow \omega_n = 4$$ 
 
 $$K\omega_n^2 = 16 \Rightarrow K = \frac{16}{16} = 1$$
