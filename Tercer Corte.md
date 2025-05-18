@@ -143,3 +143,57 @@ Figura 3: Modelo de dos puntos de Smith
 
 Tabla 1: Constantes para la indentidicacion de los modelos de primer orden mas tiempo muerto.
 Donde A, B, C y D son constantes. 
+## 9. Como se puede indentificar un sistema inestable (Lazo abierto)
+Identificar un sistema inestable en lazo abierto requiere precaución, ya que aplicar una entrada escalón directamente puede provocar respuestas crecientes que dañen el sistema o los equipos de medición. 
+
+## 10. Aproximacion FOPDTI
+La aproximación FOPDTI (First Order Plus Dead Time Integrator) es una extensión del modelo FOPDT (Primer Orden con Tiempo Muerto) que incorpora un comportamiento integrador en el proceso. Este modelo es especialmente útil para representar sistemas que exhiben una respuesta creciente sin alcanzar un estado estacionario, como aquellos con acumulación de masa o energia.
+
+### 10.1  ¿Qué es un modelo FOPDTI?
+Un modelo FOPDTI describe procesos que combinan un comportamiento integrador con una dinámica de primer orden y un tiempo muerto. La función de transferencia típica de un sistema FOPDTI es:
+
+$$ G(s) = \frac{K*e^{-Ls}}{(\tau *s+1)s}$$
+
+### 10.2 Indentificacion de parametrs en un modelo FOPDTI
+#### 10.2.1 Método de la línea tangente
+Este método consiste en aplicar una entrada escalón al sistema y registrar la respuesta. Luego, se traza una tangente en el punto de inflexión de la curva de respuesta. Los parámetros se estiman de la siguiente manera:
+
+- Tiempo muerto.
+- Constante de tiempo.
+- Ganancia.
+Este método es sencillo y proporciona una estimación rápida de los parámetros del modelo.
+
+![9b7d6bf417ad85fcdef814593a5004c6](https://github.com/user-attachments/assets/c38a0413-039d-47b2-960d-51edecce4ea8)
+
+Figura 4: Respuestas en el sistema.
+
+#### 10.2.2  Método de dos puntos
+Este enfoque utiliza dos puntos específicos en la curva de respuesta, típicamente donde la salida alcanza el 28.3% y el 63.2% del cambio total. A partir de estos puntos, se calculan los parámetros del modelo utilizando fórmulas empíricas. Este método es menos sensible al ruido y no requiere identificar el punto de inflexión.
+
+#### 10.2.3  Métodos computacionales
+Se pueden emplear algoritmos de optimización, como el método de mínimos cuadrados no lineales, para ajustar el modelo FOPDTI a los datos experimentales. Estos métodos buscan minimizar la diferencia entre la respuesta del modelo y los datos reales, proporcionando una estimación precisa de los parámetros.
+
+## 11.  Aproximacion IPDT
+a aproximación IPDT (Integrating Plus Dead Time) es una técnica de modelado utilizada en sistemas de control para representar procesos que exhiben un comportamiento integrador junto con un retardo de tiempo. Este modelo es especialmente útil para describir sistemas donde la salida continúa cambiando indefinidamente ante una entrada constante, y existe un retraso significativo entre la entrada y la respuesta del sistema.
+
+### 11.1 ¿Qué es un modelo IPDT?
+
+Un modelo IPDT se caracteriza por tener una ganancia integradora y un tiempo muerto. La función de transferencia típica de un sistema IPDT es:
+
+$$G(s) = \frac{K*e^{-Ls}}{s}$$
+
+Este modelo es adecuado para procesos donde la salida se acumula con el tiempo, como en sistemas de nivel de tanques o control de temperatura, y donde hay un retardo antes de que la salida comience a responder a una entrada.
+
+![fopdt_graphical_fit](https://github.com/user-attachments/assets/ebff2b6c-dafc-4c3a-ac3f-8122bbd75751)
+
+Figura 5: Respusta de aproximacion IPDT.
+
+### 11.2  Identificación de parámetros en un modelo IPDT
+#### 11.2.1  Método de la línea tangente
+Este método consiste en aplicar una entrada escalón al sistema y registrar la respuesta. Luego, se traza una tangente en el punto de inflexión de la curva de respuesta. Los parámetros se estiman de la siguiente manera:
+- Tiempo muerto.
+- Ganancia.
+Este método es sencillo y proporciona una estimación rápida de los parámetros del modelo.
+
+#### 10.2.2 Métodos computacionales
+Se pueden emplear algoritmos de optimización, como el método de mínimos cuadrados no lineales, para ajustar el modelo IPDT a los datos experimentales. Estos métodos buscan minimizar la diferencia entre la respuesta del modelo y los datos reales, proporcionando una estimación precisa de los parámetros.
